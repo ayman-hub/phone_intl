@@ -429,7 +429,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       validator: (value) {
         if (value == null || !isNumeric(value)) return validatorMessage;
         if (!widget.disableLengthCheck) {
-          return value.length >= _selectedCountry.minLength && value.length <= _selectedCountry.maxLength
+          return value.length == _selectedCountry.minLength &&  (value.length >= _selectedCountry.maxLength - 1||(value.length == _selectedCountry.maxLength && (value.indexOf("0") == 0)))
               ? null
               : widget.invalidNumberMessage;
         }

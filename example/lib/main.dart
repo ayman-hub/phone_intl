@@ -53,6 +53,7 @@ class _MyAppState extends State<MyApp> {
                 SizedBox(
                   height: 10,
                 ),
+
                 IntlPhoneField(
                   focusNode: focusNode,
                   decoration: InputDecoration(
@@ -62,6 +63,7 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ),
                   languageCode: "ar",
+
                   onChanged: (phone) {
                     print(phone.completeNumber);
                   },
