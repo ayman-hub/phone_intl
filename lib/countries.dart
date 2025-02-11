@@ -1952,7 +1952,7 @@ const List<Country> countries = [
     flag: "🇪🇬",
     code: "EG",
     dialCode: "20",
-    minLength: 1 + 10,
+    minLength:  10,
     maxLength: 1 + 10,
   ),
   Country(
